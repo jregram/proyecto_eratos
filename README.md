@@ -14,15 +14,21 @@ Aplicación web para gestionar una colección de libros, con login simulado y AP
 
 1. Clona el repositorio  
    ```bash
-   git clone https://github.com/TU_USUARIO/proyecto_eratos.git
+   git clone https://github.com/jregram/proyecto_eratos.git
    cd proyecto_eratos
 
-2. Crea un entorno virtual e instálalo  
+2. Crea un entorno virtual e instálalo
+   ```bash  
    python -m venv venv
+   ```bash
    source venv/bin/activate   # macOS/Linux
+   ```bash
    venv\Scripts\activate      # Windows
+   ```bash
    pip install -r requirements.txt
+   
 3. Aplica migraciones
+   ```bash
    python manage.py migrate
 
 ## ▶️ Ejecución en Local
@@ -42,6 +48,7 @@ Aplicación web para gestionar una colección de libros, con login simulado y AP
 
 🌐 API REST
 
+  ```bash
 La API está expuesta bajo el prefijo /api/libros/
 Método		Ruta			Descripción
 GET		/api/libros/		Listar todos los libros
