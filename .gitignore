@@ -1,0 +1,17 @@
+# Entorno virtual
+eratos_env/
+
+# Cachés de Python
+__pycache__/
+*.py[cod]
+
+# Archivos de configuración de editores
+.vscode/
+.idea/
+
+# Base de datos SQLite (si la usas)
+db.sqlite3
+
+# Logs y archivos temporales
+*.log
+*.tmp

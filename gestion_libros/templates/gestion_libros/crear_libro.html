@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+  <h2>Agregar Nuevo Libro</h2>
+
+  <hr class="my-4">
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div class="mb-3">
+      {{ form.titulo.label_tag }}
+      {{ form.titulo|add_class:"form-control" }}
+      {{ form.titulo.errors }}
+    </div>
+
+    <div class="mb-3">
+      {{ form.autor.label_tag }}
+      {{ form.autor|add_class:"form-control" }}
+      {{ form.autor.errors }}
+    </div>
+
+    <div class="mb-3">
+      {{ form.genero.label_tag }}
+      {{ form.genero|add_class:"form-control" }}
+      {{ form.genero.errors }}
+    </div>
+
+    <div class="mb-3">
+      {{ form.valoracion.label_tag }}
+      {{ form.valoracion|add_class:"form-control"}}
+      {{ form.valoracion.errors }}
+    </div>
+
+    <hr class="my-4">
+
+    <div class="mb-3">
+      <button class="btn btn-primary" type="submit">Crear</button>
+      <a class="btn btn-outline-secondary" href="{% url 'libros_list' %}">Cancelar</a>
+    </div>
+  </form>
+{% endblock %}

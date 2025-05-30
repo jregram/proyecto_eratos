@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Detalle del Libro</h2>
+  <hr class="my-4">
+
+  <dl>
+    <dt>Título:</dt>
+    <dd>{{ libro.titulo }}</dd>
+
+    <dt>Autor:</dt>
+    <dd>{{ libro.autor }}</dd>
+
+    <dt>Género:</dt>
+    <dd>{{ libro.genero }}</dd>
+
+    <dt>Valoración:</dt>
+    <dd>{{ libro.valoracion }}</dd>
+  </dl>
+
+  <hr class="my-4">
+
+  <p>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'editar_libro' libro.id %}">Editar</a>
+    &nbsp;|&nbsp;
+    <a class="btn btn-danger" href="{% url 'eliminar_libro' libro.id %}">Eliminar</a>
+    &nbsp;|&nbsp;
+    <a class="btn btn-outline-secondary" href="{% url 'libros_list' %}">Volver a la lista</a>
+  </p>
+{% endblock %}
