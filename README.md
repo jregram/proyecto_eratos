@@ -4,8 +4,8 @@ Aplicación web para gestionar una colección de libros, con login simulado y AP
 
 ## 🚀 Tecnologías
 
-- Python 3.x  
-- Django 4.x  
+- Python 3.10.12  
+- Django 5.2.1 
 - Django REST Framework  
 - Bootstrap 5  
 - django-widget-tweaks  
@@ -33,7 +33,10 @@ Aplicación web para gestionar una colección de libros, con login simulado y AP
 
 ## ▶️ Ejecución en Local
 
-1. python manage.py runserver
+1. Ejecuta el servidor
+    ```bash
+    python manage.py runserver
+    
 2. Abre tu navegador en http://127.0.0.1:8000/
 
 ## 📝 Uso (Web)
@@ -52,6 +55,7 @@ Aplicación web para gestionar una colección de libros, con login simulado y AP
 La API está expuesta bajo el prefijo /api/libros/
 
 Método		Ruta			Descripción
+
 GET		/api/libros/		Listar todos los libros
 POST		/api/libros/		Crear un libro nuevo
 GET		/api/libros/{id}/	Detalle de un libro
